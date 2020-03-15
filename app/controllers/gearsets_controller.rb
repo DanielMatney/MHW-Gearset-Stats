@@ -9,7 +9,7 @@ class GearsetsController < ApplicationController
   end
 
   def create
-
+    @gearset = Gearset.find(params[:id])
   end
 
   def show
