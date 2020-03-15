@@ -1,0 +1,6 @@
+<h1> Pieces </h1>
+<tbody>
+  <% @pieces.each do |piece| %>
+    <tr><div><%= link_to piece.name, piece_path(piece) %></div></tr>
+  <% end %>
+</tbody>
