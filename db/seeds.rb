@@ -6,7 +6,6 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 set_list = [
-  [
     ["Alloy", 8, -2, 1, -2, -2, 1,],
     ["Alloy Alpha", 36, -2, 0, -2, -2, 0],
     ["Anja", 20, 3, -3, -1, -1, 0],
