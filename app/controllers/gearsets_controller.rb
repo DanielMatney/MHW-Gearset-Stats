@@ -15,8 +15,9 @@ class GearsetsController < ApplicationController
   def create
     @gearset = Gearset.new(gearset_params)
     if @gearset.save
-      redirect_to user_gearset_path(@gearset)
+      redirect_to gearset_path(@gearset)
     else
+      binding.pry
       render :new
     end
   end

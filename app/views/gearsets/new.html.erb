@@ -1,5 +1,7 @@
 <h1>Create a new Gearset</h1>
 
+<%= render partial: '/errors', locals: { record: @gearset } %>
+
 <%= form_for @gearset do |f| %>
   <%= f.label :name %></br>
   <%= f.text_field :name %></br>
@@ -13,5 +15,5 @@
   <%= collection_select( :gearset, :waist, Piece.all.select{|piece| piece.slot == "Waist"}, :id, :name, {},  { :multiple => false}) %></br>
   <%= f.label :legs %></br>
   <%= collection_select( :gearset, :legs, Piece.all.select{|piece| piece.slot == "Legs"}, :id, :name, {},  { :multiple => false}) %></br>
-  <%= f.submit %>
+  <%= f.submit "Create a new Gearset"%>
 <% end %>

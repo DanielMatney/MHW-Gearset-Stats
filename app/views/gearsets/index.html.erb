@@ -1,6 +1,10 @@
-<h1> Gearsets </h1>
+<h1> Gearsets </h1></br>
+
+<%= link_to "Create a Gearset", new_gearset_path %></br>
+
 <tbody>
   <% @gearsets.each do |gearset| %>
     <tr><div><%= link_to gearset.name, gearset_path(gearset) %></div></tr>
+    <% #show total stats %>
   <% end %>
 </tbody>
