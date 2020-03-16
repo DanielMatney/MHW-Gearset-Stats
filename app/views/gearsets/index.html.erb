@@ -4,7 +4,12 @@
 
 <tbody>
   <% @gearsets.each do |gearset| %>
-    <tr><div><%= link_to gearset.name, gearset_path(gearset) %></div></tr>
-    <% #show total stats %>
+    <h2><tr><div><%= link_to gearset.name, gearset_path(gearset) %></div></tr></h2>
+    <p>Defense: <%= stats_array(gearset)[0] %></p>
+    <p>Fire Resist: <%= stats_array(gearset)[1] %></p>
+    <p>Water Resist: <%= stats_array(gearset)[2] %></p>
+    <p>Thunder Resist: <%= stats_array(gearset)[3] %></p>
+    <p>Ice Resist: <%= stats_array(gearset)[4] %></p>
+    <p>Dragon Resist: <%= stats_array(gearset)[5] %></p>
   <% end %>
 </tbody>

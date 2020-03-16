@@ -17,7 +17,6 @@ class GearsetsController < ApplicationController
     if @gearset.save
       redirect_to gearset_path(@gearset)
     else
-      binding.pry
       render :new
     end
   end
