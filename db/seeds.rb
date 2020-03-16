@@ -27,7 +27,7 @@ set_list = [
     ["Ingot", 50, -2, 0, 3, -1, 0],
     ["Jyura", 14, -1, 2, -3, 0, 0],
     ["Jyura Alpha", 44, -1, 2, -3, 0, 0],
-    ["Kadachi", 16, 0, -3, 3, 0, 0].
+    ["Kadachi", 16, 0, -3, 3, 0, 0],
     ["Kadachi Alpha", 44, 0, -3, 3, 0, 0],
     ["Kaiser Alpha", 64, 3, -3, 1, -3, 1],
     ["Kirin Alpha", 64, -3, -2, 4, -2, 2],
@@ -37,11 +37,11 @@ set_list = [
 
 def make_gear(list)
   list.each do |name, defense, f, w, t, i, d|
-    Piece.create(name: name + "Helm", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Head")
-    Piece.create(name: name + "Mail", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Chest")
-    Piece.create(name: name + "Gloves", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Arms")
-    Piece.create(name: name + "Belt", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Waist")
-    Piece.create(name: name + "Greaves", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Legs")
+    Piece.create(name: name + " Helm", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Head")
+    Piece.create(name: name + " Mail", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Body")
+    Piece.create(name: name + " Gloves", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Arms")
+    Piece.create(name: name + " Belt", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Waist")
+    Piece.create(name: name + " Greaves", defense: defense, fire_res: f, water_res: w, thunder_res: t, ice_res: i, dragon_res: d, slot: "Legs")
   end
 end
 

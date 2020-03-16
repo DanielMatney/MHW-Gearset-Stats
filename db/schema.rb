@@ -26,6 +26,8 @@ ActiveRecord::Schema.define(version: 20200315170057) do
   create_table "gearsetspieces", force: :cascade do |t|
     t.integer "gearset_id"
     t.integer "piece_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "pieces", force: :cascade do |t|
