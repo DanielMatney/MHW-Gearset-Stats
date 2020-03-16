@@ -1,4 +1,4 @@
 class GearsetsPiece < ApplicationRecord
-  has_many :gearsets
-  has_many :pieces
+  belongs_to :gearset
+  belongs_to :piece
 end
