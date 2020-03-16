@@ -46,3 +46,4 @@ def make_gear(list)
 end
 
 make_gear(set_list)
+Gearset.create(name: "Alloy", head: 0, body: 1, arms: 2, waist: 3, legs: 4)
