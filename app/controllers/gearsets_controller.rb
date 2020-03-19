@@ -44,6 +44,6 @@ class GearsetsController < ApplicationController
 
 private
   def gearset_params
-    params.require(:gearset).permit(:name, :head, :body, :legs, :waist, :arms)
+    params.require(:part).permit(:name, :head, :body, :legs, :waist, :arms)
   end
 end

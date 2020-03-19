@@ -8,23 +8,18 @@
 
   <%= f.label :head %></br>
   <%= collection_select( :gearset, :head, Piece.all.select{|piece| piece.slot == "Head"}, :id, :name, {},  { :multiple => false}) %></br>
-  <%= render partial: '/icons' %>
 
   <%= f.label :body %></br>
   <%= collection_select( :gearset, :body, Piece.all.select{|piece| piece.slot == "Body"}, :id, :name, {},  { :multiple => false}) %></br>
-  <%= render partial: '/icons' %>
 
   <%= f.label :arms %></br>
   <%= collection_select( :gearset, :arms, Piece.all.select{|piece| piece.slot == "Arms"}, :id, :name, {},  { :multiple => false}) %></br>
-  <%= render partial: '/icons' %>
 
   <%= f.label :waist %></br>
   <%= collection_select( :gearset, :waist, Piece.all.select{|piece| piece.slot == "Waist"}, :id, :name, {},  { :multiple => false}) %></br>
-  <%= render partial: '/icons' %>
 
   <%= f.label :legs %></br>
   <%= collection_select( :gearset, :legs, Piece.all.select{|piece| piece.slot == "Legs"}, :id, :name, {},  { :multiple => false}) %></br>
-  <%= render partial: '/icons' %>
 
   <%= f.submit "Create a new Gearset"%>
 <% end %>
