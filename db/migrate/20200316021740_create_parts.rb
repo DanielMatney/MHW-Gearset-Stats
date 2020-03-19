@@ -1,9 +1,9 @@
 class CreateParts < ActiveRecord::Migration[5.1]
   def change
     create_table :parts do |t|
-      t.integer :gearset_id
-      t.integer :piece_id
-      t.string :image_url
+      t.belongs_to :gearset
+      t.belongs_to :piece
+      t.integer :icon
     end
   end
 end

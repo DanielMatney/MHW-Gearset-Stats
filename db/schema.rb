@@ -26,6 +26,9 @@ ActiveRecord::Schema.define(version: 20200316021740) do
   create_table "parts", force: :cascade do |t|
     t.integer "gearset_id"
     t.integer "piece_id"
+    t.integer "icon"
+    t.index ["gearset_id"], name: "index_parts_on_gearset_id"
+    t.index ["piece_id"], name: "index_parts_on_piece_id"
   end
 
   create_table "pieces", force: :cascade do |t|

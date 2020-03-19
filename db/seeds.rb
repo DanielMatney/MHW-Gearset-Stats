@@ -46,4 +46,9 @@ def make_gear(list)
 end
 
 make_gear(set_list)
-Gearset.create(name: "Alloy", head: 0, body: 1, arms: 2, waist: 3, legs: 4)
+gearset = Gearset.create(name: "Alloy", head: 1, body: 2, arms: 3, waist: 4, legs: 5)
+gearset.pieces << Piece.find(gearset.head)
+gearset.pieces << Piece.find(gearset.body)
+gearset.pieces << Piece.find(gearset.arms)
+gearset.pieces << Piece.find(gearset.waist)
+gearset.pieces << Piece.find(gearset.legs)
