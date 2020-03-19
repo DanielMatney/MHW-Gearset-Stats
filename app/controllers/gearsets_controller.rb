@@ -15,6 +15,11 @@ class GearsetsController < ApplicationController
   def create
     @gearset = Gearset.new(gearset_params)
     if @gearset.save
+      @gearset.pieces << Piece.find(@gearset.head)
+      @gearset.pieces << Piece.find(@gearset.body)
+      @gearset.pieces << Piece.find(@gearset.arms)
+      @gearset.pieces << Piece.find(@gearset.waist)
+      @gearset.pieces << Piece.find(@gearset.legs)
       redirect_to gearset_path(@gearset)
     else
       render :new

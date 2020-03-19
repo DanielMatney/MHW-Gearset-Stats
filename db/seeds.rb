@@ -5,6 +5,18 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+images = [
+ [".../assets/images/icons/dragon.png", "Dragon Resist"],
+ [".../assets/images/icons/fire.png", "Fire Resist"],
+ [".../assets/images/icons/ice.png", "Ice Resist"],
+ [".../assets/images/icons/thunder.png", "Thunder Resist"],
+ [".../assets/images/icons/water.png", "Water Resist"]
+]
+
+images.each do |img|
+   Image.create(url: img[0], name: img[1])
+end
+
 set_list = [
     ["Alloy", 8, -2, 1, -2, -2, 1,],
     ["Alloy Alpha", 36, -2, 0, -2, -2, 0],
